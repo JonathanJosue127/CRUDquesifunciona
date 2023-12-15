@@ -14,12 +14,12 @@
         <form asp-action= "Guardar" asp-controller="Empleado" method="post">
             <div class="mb-3">
                 <label for="exampleInputEmail1" class="form-label">Empleado</label>
-                <input asp-for="NombreEmpleado" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                <input asp-for="NombreEmpleado" type="text" class="form-control">
                 <span asp-validation-for="NombreEmpleado" class="text-danger"></span>
             </div>
             <div class="mb-3">
                 <label  for="exampleInputPassword1" class="form-label">Cargo</label>
-                <input asp-for ="Cargo" type="Text" class="form-control" id="exampleInputPassword1">
+                <input asp-for ="Cargo" type="Text" class="form-control">
                 <span asp-validation-for="Cargo" class="text-danger"></span>
 
             </div>

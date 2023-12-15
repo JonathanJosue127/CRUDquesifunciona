@@ -25,8 +25,8 @@ namespace CRUDFuncional.Controllers
         {
             
             //en caso de que todos los campos sean validos
-            if (ModelState.IsValid) 
-                return View();
+            //if (ModelState.IsValid) 
+              //  return View();
              //recibe el objeto y lo guarda en la BD
              var respuesta = _EmpleadoData.Guardar(oEmpleado);
 
@@ -48,8 +48,8 @@ namespace CRUDFuncional.Controllers
         [HttpPost]
         public IActionResult Editar(EmpleadosModel oEmpleado)
         {
-            if (ModelState.IsValid)
-               // return View();
+            //if (ModelState.IsValid)
+              //  return View();
             //recibe el objeto y lo guarda en la BD
             var respuesta = _EmpleadoData.Editar(oEmpleado);
 
@@ -77,8 +77,5 @@ namespace CRUDFuncional.Controllers
             else
                 return View();
         }
-
-
-
     }
 }
