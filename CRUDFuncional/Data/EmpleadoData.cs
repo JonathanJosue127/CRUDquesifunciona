@@ -27,7 +27,7 @@ namespace CRUDFuncional.Data
                         oLista.Add(new EmpleadosModel() { 
                             IdEmpleado = Convert.ToInt32(dr["IdEmpleado"]),
                             NombreEmpleado = (dr["NombreEmpleado"].ToString()),
-                            Cargo = (dr["IdEmpleado"].ToString())
+                            Cargo = (dr["Cargo"].ToString())
                         });
                     }
                 }
@@ -55,7 +55,7 @@ namespace CRUDFuncional.Data
 
                         oContacto.IdEmpleado = Convert.ToInt32(dr["IdEmpleado"]);
                         oContacto.NombreEmpleado = (dr["NombreEmpleado"].ToString());
-                        oContacto.Cargo = (dr["IdEmpleado"].ToString());
+                        oContacto.Cargo = (dr["Cargo"].ToString());
                        
                     }
                 }
@@ -63,6 +63,88 @@ namespace CRUDFuncional.Data
                 return oContacto;
         }
 
+        public bool Guardar(EmpleadosModel oempleado)
+        {
+            bool rpta;
+            try
+            {
+                var cn = new Conexion();
+                using (var conexion = new SqlConnection(cn.getCadenaSQL()))
+                {
+                    conexion.Open();
+                    SqlCommand cmd = new SqlCommand("sp_Guardar", conexion);
+                    cmd.Parameters.AddWithValue("IdEmpleado",oempleado.IdEmpleado);
+                    cmd.Parameters.AddWithValue("NombreEmpleado",oempleado.NombreEmpleado);
+                    cmd.Parameters.AddWithValue("Cargo", oempleado.Cargo);
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.ExecuteNonQuery();
 
+                }
+                rpta = true;
+            }
+            catch(Exception ex)
+            {
+                string error = ex.Message;
+                rpta = false;
+            }
+            
+            return rpta;
+        }
+
+        public bool Editar(EmpleadosModel oempleado)
+        {
+            bool rpta;
+            try
+            {
+                var cn = new Conexion();
+                using (var conexion = new SqlConnection(cn.getCadenaSQL()))
+                {
+                    conexion.Open();
+                    SqlCommand cmd = new SqlCommand("sp_Editar", conexion);
+                    cmd.Parameters.AddWithValue("IdEmpleado", oempleado.IdEmpleado);
+                    cmd.Parameters.AddWithValue("NombreEmpleado", oempleado.NombreEmpleado);
+                    cmd.Parameters.AddWithValue("Cargo", oempleado.Cargo);
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.ExecuteNonQuery();
+
+                }
+                rpta = true;
+            }
+            catch (Exception ex)
+            {
+                string error = ex.Message;
+                rpta = false;
+            }
+
+            return rpta;
+        }
+
+        public bool Eliminar (int IdEmpleado)
+        {
+            bool rpta;
+            try
+            {
+                var cn = new Conexion();
+                using (var conexion = new SqlConnection(cn.getCadenaSQL()))
+                {
+                    conexion.Open();
+                    SqlCommand cmd = new SqlCommand("sp_Eliminar", conexion);
+                    cmd.Parameters.AddWithValue("IdEmpleado", IdEmpleado);
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.ExecuteNonQuery();
+
+                }
+                rpta = true;
+            }
+            catch (Exception ex)
+            {
+                string error = ex.Message;
+                rpta = false;
+            }
+
+            return rpta;
+        }
+
+        
     }
 }

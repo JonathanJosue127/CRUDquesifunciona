@@ -1,0 +1,35 @@
+﻿@model EmpleadosModel
+@{
+    ViewData["Title"] = "Editar";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+
+<div class="card">
+    <div class="card-header">
+        Editar empleado 
+    </div>
+    <div class="card-body">
+
+
+        <form asp-action="Editar" asp-controller="Empleado" method="post">
+            
+                <input asp-for="IdEmpleado" type="hidden" class="form-control"></input>
+            <div class="mb-3">
+                <label class="form-label">Empleado</label>
+                <input asp-for="NombreEmpleado" type="text" class="form-control">
+                <span asp-validation-for="NombreEmpleado" class="text-danger"></span>
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Cargo</label>
+                <input asp-for="Cargo" type="Text" class="form-control">
+                <span asp-validation-for="Cargo" class="text-danger"></span>
+
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+            <a asp-action="Listar" asp-controller="Empleado" class="btn-warning" />Volver a la lista</a>
+        </form>
+    </div>
+</div>
+

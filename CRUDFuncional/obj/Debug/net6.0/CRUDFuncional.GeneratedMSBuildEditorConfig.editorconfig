@@ -12,9 +12,25 @@ build_property.RootNamespace = CRUDFuncional
 build_property.ProjectDir = C:\Users\ctaba\OneDrive\Desktop\CRUDFuncional\CRUDFuncional\
 build_property.RazorLangVersion = 6.0
 build_property.SupportLocalizedComponentNames = 
-build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = true
 build_property.MSBuildProjectDirectory = C:\Users\ctaba\OneDrive\Desktop\CRUDFuncional\CRUDFuncional
 build_property._RazorSourceGeneratorDebug = 
+
+[C:/Users/ctaba/OneDrive/Desktop/CRUDFuncional/CRUDFuncional/Views/Empleado/Editar.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1wbGVhZG9cRWRpdGFyLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ctaba/OneDrive/Desktop/CRUDFuncional/CRUDFuncional/Views/Empleado/Eliminar.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1wbGVhZG9cRWxpbWluYXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ctaba/OneDrive/Desktop/CRUDFuncional/CRUDFuncional/Views/Empleado/Guardar.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1wbGVhZG9cR3VhcmRhci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ctaba/OneDrive/Desktop/CRUDFuncional/CRUDFuncional/Views/Empleado/Listar.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1wbGVhZG9cTGlzdGFyLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/ctaba/OneDrive/Desktop/CRUDFuncional/CRUDFuncional/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
